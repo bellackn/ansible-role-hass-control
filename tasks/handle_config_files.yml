@@ -5,9 +5,9 @@
     dest: "{{ hass_control_config_local_root_files }}/{{ item }}.yaml"
     flat: yes
   when:
-  - hass_control_mode == "get"
-  # We don't want to fetch unencrypted secrets
-  - "'secrets' not in item"
+    - hass_control_mode == "get"
+    # We don't want to fetch unencrypted secrets
+    - "'secrets' not in item"
 
 - name: "Set '{{ item }}' config"
   copy:

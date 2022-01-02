@@ -1,6 +1,7 @@
 ---
 galaxy_info:
   role_name: hass_control
+  namespace: bellackn
   author: Nico Bellack
   description: Set and retrieve Home Assistant configuration files
   license: MIT
