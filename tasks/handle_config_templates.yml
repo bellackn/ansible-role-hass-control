@@ -1,0 +1,6 @@
+---
+- name: "Copy '{{ item }}' config to Home Assistant"
+  template:
+    src: "{{ hass_control_config_local_root_templates }}/{{ item }}.yaml.j2"
+    dest: "{{ hass_control_config_remote_root }}/{{ item }}.yaml"
+  notify: Restart Home Assistant

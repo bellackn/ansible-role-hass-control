@@ -1,0 +1,9 @@
+---
+- name: Restart Home Assistant
+  uri:
+    url: "{{ hass_control_home_assistant_base_url }}/api/services/homeassistant/restart"
+    method: POST
+    headers:
+      Authorization: "Bearer {{ hass_control_home_assistant_auth_token }}"
+      Content-Type: application/json
+  when: hass_control_mode == "set"

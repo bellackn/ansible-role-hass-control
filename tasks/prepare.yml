@@ -1,0 +1,10 @@
+---
+- name: Check if Python3 is already installed
+  command: which python3
+  register: py3_result
+  ignore_errors: yes
+  changed_when: no
+
+- name: Install Python3
+  raw: apk update --no-cache && apk add python3
+  when: py3_result.rc is not defined or py3_result.rc != 0
