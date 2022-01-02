@@ -23,7 +23,7 @@ jobs:
       matrix:
         include:
           - NAME: min_ansible_version
-            ANSIBLE_VERSION: "==2.11.*"
+            ANSIBLE_VERSION: "==2.7.*"
             ANSIBLE_LINT_VERSION: "==4.2.*"
           - NAME: latest
             ANSIBLE_VERSION: ""
