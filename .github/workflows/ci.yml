@@ -25,14 +25,16 @@ jobs:
           - NAME: min_ansible_version
             ANSIBLE_VERSION: "==2.9.*"
             ANSIBLE_LINT_VERSION: "==4.2.*"
+            PYTHON_VERSION: "3.11"
           - NAME: latest
             ANSIBLE_VERSION: ""
             ANSIBLE_LINT_VERSION: ""
+            PYTHON_VERSION: "3.12"
 
     steps:
 
       - name: Check out the codebase
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           path: '${{ env.ROLE_NAME }}'
 
@@ -49,9 +51,9 @@ jobs:
           > ansible.cfg
 
       - name: Set up Python 3
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.x"
+          python-version: "${{ matrix.PYTHON_VERSION }}"
 
       - name: Install pip tools
         run: |
