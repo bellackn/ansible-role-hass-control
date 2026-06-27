@@ -5,17 +5,17 @@ galaxy_info:
   author: Nico Bellack
   description: Set and retrieve Home Assistant configuration files
   license: MIT
-  min_ansible_version: 2.9
+  min_ansible_version: "2.15"
 
   platforms:
     - name: Ubuntu
       versions:
-        - focal
-        - bionic
+        - jammy
+        - noble
     - name: Debian
       versions:
-        - buster
-        - stretch
+        - bullseye
+        - bookworm
 
   galaxy_tags:
     - homeassistant
