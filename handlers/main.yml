@@ -1,6 +1,6 @@
 ---
 - name: Restart Home Assistant
-  uri:
+  ansible.builtin.uri:
     url: "{{ hass_control_home_assistant_base_url }}/api/services/homeassistant/restart"
     method: POST
     headers:
@@ -10,7 +10,7 @@
   when: hass_control_mode == "set"
 
 - name: Wait for Home Assistant to come back online
-  uri:
+  ansible.builtin.uri:
     url: "{{ hass_control_home_assistant_base_url }}/api/"
     headers:
       Authorization: "Bearer {{ hass_control_home_assistant_auth_token }}"
