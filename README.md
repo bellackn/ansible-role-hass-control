@@ -1,7 +1,7 @@
-![build_status_badge_ci](https://github.com/bellackn/ansible-role-hass-control/actions/workflows/ci.yml/badge.svg)
-
 bellackn.hass_control
 ===============
+
+> This role has moved into the [`bellackn.homelab`](https://github.com/bellackn/ansible-collection-homelab) collection and will be maintained there.
 
 Use this role to easily set and retrieve configurations for Home Assistant. 
 
